@@ -1,6 +1,13 @@
 import { randomUUID } from "crypto";
 
-
+export interface IGameDTO{
+  name: string;
+  designer: string;
+  genre: string;
+  platform: string;
+  releaseData: string;
+  mode: string;
+}
 
 export class Game {
   id?: string;
