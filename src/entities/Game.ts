@@ -5,6 +5,7 @@ export interface IGameDTO{
   designer: string;
   genre: string;
   platform: string;
+  developer: string;
   releaseData: string;
   mode: string;
 }

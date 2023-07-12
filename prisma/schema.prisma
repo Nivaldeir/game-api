@@ -12,6 +12,7 @@ model Game{
   name String
   designer String
   platform String
+  genre String
   developer String
   releaseData String
   mode String
