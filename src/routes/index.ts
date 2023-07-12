@@ -3,5 +3,5 @@ import registerRoutes from "./register.routes"
 
 const routes = Router()
 
-routes.use("/",registerRoutes)
+routes.use("/register",registerRoutes)
 export {routes}

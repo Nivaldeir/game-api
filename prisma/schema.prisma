@@ -1,5 +1,6 @@
 generator client {
-  provider = "prisma-client-js"
+  provider      = "prisma-client-js"
+  binaryTargets = ["native", "debian-openssl-3.0.x", "debian-openssl-1.1.x", "linux-musl", "linux-musl-openssl-3.0.x"]
 }
 
 datasource db {
@@ -7,15 +8,15 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Game{
-  id Int @id @default(autoincrement())
-  name String
-  designer String
-  platform String
-  genre String
-  developer String
+model Game {
+  id          Int      @id @default(autoincrement())
+  name        String
+  designer    String
+  platform    String
+  developer   String
   releaseData String
-  mode String
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  mode        String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @default(now())
+  genre       String
 }
