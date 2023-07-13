@@ -1,6 +1,6 @@
 import { injectable,inject } from "tsyringe";
-import { IGameDTO } from "../../games/infra/entities/Game";
-import { IGameRepository } from "../../games/infra/repositories/IGameRepository";
+import { IGameDTO } from "../../infra/entities/Game";
+import { IGameRepository } from "../../infra/repositories/IGameRepository";
 
 @injectable()
 export class RegisterGameUseCase{
