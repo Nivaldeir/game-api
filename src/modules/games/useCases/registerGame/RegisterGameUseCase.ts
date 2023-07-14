@@ -6,11 +6,14 @@ import { IGameRepository } from "../../infra/repositories/IGameRepository";
 export class RegisterGameUseCase{
   constructor(
     @inject('GameRepository')
-    private gameRepository: IGameRepository
+    private readonly gameRepository: IGameRepository
     ){
 
   }
   async execute({designer,developer,genre,mode,name,platform,releaseData}:IGameDTO): Promise<void>{
+    if(releaseData === "1980"){
+      throw new Error('Release data not authorized')
+    }
     await this.gameRepository.register({designer,developer,genre,mode,name,platform,releaseData})
   }
 }
