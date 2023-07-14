@@ -8,6 +8,7 @@ const registerValidator = {
     developer: Joi.string().required().messages(customMessage('Developer')),
     releaseData: Joi.string().required().messages(customMessage('ReleaseData')),
     mode: Joi.string().required().messages(customMessage('Mode')),
+    genre: Joi.string().required().messages(customMessage('Genre')),
   })
 }
 

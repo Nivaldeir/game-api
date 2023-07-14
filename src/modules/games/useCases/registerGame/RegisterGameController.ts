@@ -1,5 +1,5 @@
 import { Request,Response} from "express";
-import { IGameDTO } from "../../games/infra/entities/Game";
+import { IGameDTO } from "../../infra/entities/Game";
 import {RegisterGameUseCase} from "./RegisterGameUseCase"
 import {container} from "tsyringe" 
 
